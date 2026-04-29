@@ -1,0 +1,1 @@
+30 9 * * * cd /home/wangzetian1/ai-news-bot/repo && printf '\n[%s] cron trigger\n' "$(TZ=Asia/Shanghai date '+%F %T %Z')" >> /home/wangzetian1/ai-news-bot/data/logs/cron.log && /home/wangzetian1/ai-news-bot/venv/bin/python -m src.run_pipeline >> /home/wangzetian1/ai-news-bot/data/logs/cron.log 2>&1

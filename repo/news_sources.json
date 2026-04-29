@@ -1,0 +1,20 @@
+{
+  "sources": [
+    { "name": "anthropic_news", "url": "https://www.anthropic.com/news", "type": "html" },
+    { "name": "openai_blog", "url": "https://openai.com/blog/rss.xml", "type": "rss" },
+    { "name": "deepmind_blog", "url": "https://deepmind.google/blog/rss.xml", "type": "rss" },
+    { "name": "huggingface_blog", "url": "https://huggingface.co/blog/feed.xml", "type": "rss" },
+    { "name": "huggingface_papers", "url": "https://jamesg.blog/hf-papers.xml", "type": "rss" },
+    { "name": "arxiv_cs_ai", "url": "http://export.arxiv.org/rss/cs.AI", "type": "rss" },
+    { "name": "arxiv_cs_cl", "url": "http://export.arxiv.org/rss/cs.CL", "type": "rss" },
+    { "name": "venturebeat_ai", "url": "https://venturebeat.com/category/ai/feed/", "type": "rss" },
+    { "name": "marktechpost", "url": "https://www.marktechpost.com/feed/", "type": "rss" },
+    { "name": "techcrunch_ai", "url": "https://techcrunch.com/category/artificial-intelligence/feed/", "type": "rss" },
+    { "name": "the_verge_ai", "url": "https://www.theverge.com/ai-artificial-intelligence/rss/index.xml", "type": "rss" },
+    { "name": "mit_news_ai", "url": "https://news.mit.edu/topic/mitartificial-intelligence2-rss.xml", "type": "rss" },
+    { "name": "reddit_localllama", "url": "https://www.reddit.com/r/LocalLLaMA/top/.rss?t=day", "type": "rss" },
+    { "name": "reddit_machinelearning", "url": "https://www.reddit.com/r/MachineLearning/top/.rss?t=day", "type": "rss" },
+    { "name": "github_trending_python", "url": "https://mshibanami.github.io/GitHubTrendingRSS/daily/python.xml", "type": "rss" },
+    { "name": "hn_ai", "url": "https://hn.algolia.com/api/v1/search?tags=story&query=AI%20OR%20LLM%20OR%20GPT%20OR%20Claude%20OR%20OpenAI%20OR%20Anthropic&hitsPerPage=50", "type": "hn_algolia", "min_points": 50 }
+  ]
+}

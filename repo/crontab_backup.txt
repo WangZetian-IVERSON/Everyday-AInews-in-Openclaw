@@ -1,0 +1,2 @@
+CRON_TZ=Asia/Shanghai
+30 17 * * * cd /home/wangzetian1/ai-news-bot/repo && /home/wangzetian1/ai-news-bot/venv/bin/python -m src.run_pipeline >> /home/wangzetian1/ai-news-bot/data/logs/cron.log 2>&1
