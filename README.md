@@ -8,10 +8,16 @@
 
 <table>
   <tr>
-    <td align="center"><img src="https://github.com/user-attachments/assets/263b0fcd-3c56-4c54-89f1-ccd1f25cb376" width="210" alt="screenshot 1"/></td>
-    <td align="center"><img src="https://github.com/user-attachments/assets/d1bfa849-eb15-468e-ad80-7f5ceaafda04" width="210" alt="screenshot 2"/></td>
-    <td align="center"><img src="https://github.com/user-attachments/assets/930061f5-3e42-4fda-a5b2-8513e5e40b9e" width="210" alt="screenshot 3"/></td>
-    <td align="center"><img src="https://github.com/user-attachments/assets/28ce9b42-52c0-46dc-9e1f-c1d336a00ed9" width="210" alt="WeChat actual delivery"/></td>
+    <td align="center" width="25%"><img src="https://github.com/user-attachments/assets/263b0fcd-3c56-4c54-89f1-ccd1f25cb376" height="420" alt="封面 / Cover"/></td>
+    <td align="center" width="25%"><img src="https://github.com/user-attachments/assets/d1bfa849-eb15-468e-ad80-7f5ceaafda04" height="420" alt="今日要点 / Highlights"/></td>
+    <td align="center" width="25%"><img src="https://github.com/user-attachments/assets/930061f5-3e42-4fda-a5b2-8513e5e40b9e" height="420" alt="新闻详情 / Details"/></td>
+    <td align="center" width="25%"><img src="https://github.com/user-attachments/assets/28ce9b42-52c0-46dc-9e1f-c1d336a00ed9" height="420" alt="微信实际推送 / WeChat delivery"/></td>
+  </tr>
+  <tr>
+    <td align="center"><sub>封面 / Cover</sub></td>
+    <td align="center"><sub>今日要点 / Highlights</sub></td>
+    <td align="center"><sub>新闻详情 / Details</sub></td>
+    <td align="center"><sub>微信实际推送 / WeChat delivery</sub></td>
   </tr>
 </table>
 
