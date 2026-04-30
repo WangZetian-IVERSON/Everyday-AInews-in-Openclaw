@@ -1,6 +1,6 @@
 # everyday_AInews · 微信 AI 新闻日报机器人 / WeChat AI News Daily Bot
 
-> 每天定时抓取主流 AI 新闻 → LLM 生成中文日报 → 渲染 PDF → 通过 [OpenClaw](https://openclaw.com) CLI 自动推送到微信。
+> 每天定时(6:00pm)抓取主流 AI 新闻 → LLM 生成中文日报 → 渲染 PDF → 通过 [OpenClaw](https://openclaw.com) CLI 自动推送到微信。
 >
 > Daily pipeline: fetch AI news → summarize into a Chinese report via LLM → render PDF → push to WeChat through the OpenClaw CLI.
 
