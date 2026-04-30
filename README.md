@@ -5,7 +5,9 @@
 > Daily pipeline: fetch AI news → summarize into a Chinese report via LLM → render PDF → push to WeChat through the OpenClaw CLI.
 
 ---
-<img width="400" height="600" alt="image" src="https://github.com/user-attachments/assets/263b0fcd-3c56-4c54-89f1-ccd1f25cb376" />
+<img width="400" height="600" alt="image" src="https://github.com/user-attachments/assets/263b0fcd-3c56-4c54-89f1-ccd1f25cb376" /> <img width="300" height="500" alt="image" src="https://github.com/user-attachments/assets/d1bfa849-eb15-468e-ad80-7f5ceaafda04" /> <img width="300" height="500" alt="image" src="https://github.com/user-attachments/assets/930061f5-3e42-4fda-a5b2-8513e5e40b9e" />
+
+
 
 
 ## 目录 / Table of Contents
