@@ -113,11 +113,22 @@ After binding, record two values for `.env`:
 ### 2.3 命令行手动测试 / Smoke Test from CLI
 
 ```bash
-openclaw send \
+# 仅文本 / text only
+openclaw message send \
   --channel openclaw-weixin \
   --account "$OPENCLAW_ACCOUNT" \
   --target  "$WECHAT_TARGET_ID" \
-  --text    "hello from openclaw"
+  --message "hello from openclaw" \
+  --json
+
+# 带附件 / with file (项目正式发送用这种 / used in production)
+openclaw message send \
+  --channel openclaw-weixin \
+  --account "$OPENCLAW_ACCOUNT" \
+  --target  "$WECHAT_TARGET_ID" \
+  --message "hello with PDF" \
+  --media   "/path/to/some.pdf" \
+  --json
 ```
 
 收到消息即说明 CLI 已就绪，本项目可以直接调用它。
@@ -356,15 +367,29 @@ Just delete the entry. To temporarily disable a source without losing the URL:
 
 In `fetch_news.py`:
 
-1. 实现 `fetch_<name>_html(source)`，返回 `[{title, url, source, published_at, summary}]`。
-2. 在 `run()` 的 dispatch 里加分支：
+1. 实现 `fetch_<name>_html(source)`，返回 `[{title, url, source, published_at, summary}]` 列表。
+2. 在 `run()` 的 dispatch 里加新的 `type` 分支（推荐做法，按 type 分发）：
 
 ```python
-elif source.get("name") == "your_site":
+# fetch_news.py 中现有的 dispatch（在 run() 里）
+source_type = (source.get("type") or "").lower()
+if source_type == "rss":
+    source_items = fetch_rss_source(source, cutoff_dt)
+elif source_type == "hn_algolia":
+    source_items = fetch_hn_algolia(source, cutoff_dt)
+elif source.get("name") == "anthropic_news" or source_type == "html":
+    source_items = fetch_anthropic_html(source)
+# ↓ 新增 / add a new branch
+elif source_type == "your_type":
     source_items = fetch_your_site_html(source)
+else:
+    raise ValueError(f"Unsupported source type: {source_type}")
 ```
 
-3. 在 `news_sources.json` 添加 `{ "name": "your_site", "url": "...", "type": "html" }`。
+3. 在 `news_sources.json` 加入 `{ "name": "your_site", "url": "...", "type": "your_type" }`。
+
+> 现有 `type: "html"` 是 Anthropic 专用解析器，不要直接复用到别的网站；新网站请定义新的 `type`。
+> The existing `type: "html"` is hard-coded for Anthropic; define a new `type` for any new HTML site.
 
 ---
 
