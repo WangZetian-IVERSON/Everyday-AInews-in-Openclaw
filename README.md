@@ -8,7 +8,8 @@
 
 <table>
   <tr>
-    <td align="center" width="25%"><img src="<img width="770" height="1000" alt="屏幕截图 2026-04-30 114256" src="https://github.com/user-attachments/assets/ec6a74a4-4613-4006-a838-fc7b17123cb6" /> alt="封面 / Cover"/></td>
+    <td align="center" width="25%"><img src="<img width="770" height="1000" alt="屏幕截图 2026-04-30 114256" <img width="770" height="1000" alt="屏幕截图 2026-04-30 114256" src="https://github.com/user-attachments/assets/e070564d-42ad-4215-aec3-2be4b5a370e8" />
+/> alt="封面 / Cover"/></td>
     <td align="center" width="25%"><img src="docs/images/highlights.png" width="240" height="240" alt="今日要点 / Highlights"/></td>
     <td align="center" width="25%"><img src="docs/images/details.png" width="240" height="240" alt="新闻详情 / Details"/></td>
     <td align="center" width="25%"><img src="docs/images/wechat.png" width="240" height="240" alt="微信实际推送 / WeChat delivery"/></td>
