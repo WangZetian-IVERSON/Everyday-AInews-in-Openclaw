@@ -5,6 +5,21 @@ This project runs a daily AI-news pipeline:
 2. Summarize into markdown
 3. Send to WeChat via OpenClaw
 
+## Quick install (recommended)
+
+Clone the repo so the layout becomes `<root>/repo/<this checkout>`, then:
+
+    bash repo/install.sh           # creates venv, installs deps, writes config/.env, registers daily cron
+    bash repo/install.sh --no-cron # same but skip crontab
+
+After the script finishes:
+
+1. Edit `config/.env` (API keys, `WECHAT_FANOUT` or `WECHAT_TARGET_ID`).
+2. `openclaw channels login --channel openclaw-weixin` (one-time WeChat QR scan).
+3. Dry-run: `venv/bin/python -m src.run_pipeline --dry-run` from inside `repo/`.
+
+The rest of this README documents the manual setup that `install.sh` automates.
+
 ## 1) Environment
 
 Project root layout:
