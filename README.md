@@ -151,33 +151,6 @@ Save and it takes effect immediately. Run `python -m src.fetch_news --date $(dat
 
 ## 4. 数据流与脚本 / Data Flow & Scripts
 
-```mermaid
-sequenceDiagram
-    participant Cron
-    participant Pipeline as run_pipeline.py
-    participant Fetch as fetch_news.py
-    participant Sum as summarize_news.py
-    participant Render as render_report.py
-    participant Send as send_wechat.py
-    participant LLM
-    participant OC as OpenClaw CLI
-    participant WX as WeChat
-
-    Cron->>Pipeline: 每天定时触发
-    Pipeline->>Fetch: 拉取 news_sources.json 全部源
-    Fetch-->>Pipeline: data/raw/<date>.json
-    Pipeline->>Sum: 用 LLM 生成中文日报
-    Sum->>LLM: 单次请求 (要点+风险+逐条中文摘要)
-    LLM-->>Sum: 结构化 JSON
-    Sum-->>Pipeline: data/reports/<date>.md
-    Pipeline->>Render: markdown → HTML → PDF
-    Render-->>Pipeline: data/reports/<date>.pdf
-    Pipeline->>Send: 发送 PDF + 文本预览
-    Send->>OC: openclaw send ... --media <pdf>
-    OC->>WX: 推送到微信
-    Send-->>Pipeline: 写 state/<date>.sent
-```
-
 | 脚本 / Script | 输入 | 输出 | 备注 |
 |---|---|---|---|
 | [`fetch_news.py`](repo/src/fetch_news.py) | `news_sources.json` | `data/raw/<date>.json` | 支持 `rss` / `html` / `hn_algolia`；24h cutoff + 标题去重 |
